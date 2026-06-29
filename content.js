@@ -116,9 +116,12 @@
   }
 
   function show(digits, clientX, clientY, asPinned) {
-    const html = buildContent(digits);
-    if (!html) return false;
     pinned = !!asPinned;
+    const html = buildContent(digits);
+    if (!html) {
+      pinned = false;
+      return false;
+    }
     activeDigits = digits;
     const t = getTooltip();
     t.innerHTML = html;
