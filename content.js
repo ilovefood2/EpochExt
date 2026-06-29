@@ -68,10 +68,12 @@
     const date = new Date(ms);
     const tz = resolvedTz();
 
-    const full = new Intl.DateTimeFormat("en-US", {
+    // Date/time without the timezone suffix; we append a highlighted
+    // abbreviation ourselves below (medium time keeps seconds, drops the zone).
+    const datetime = new Intl.DateTimeFormat("en-US", {
       timeZone: tz,
       dateStyle: "full",
-      timeStyle: "long",
+      timeStyle: "medium",
     }).format(date);
 
     const parts = new Intl.DateTimeFormat("en-US", {
@@ -89,7 +91,7 @@
 
     return (
       closeBtn +
-      `<span class="eh-row"><span class="eh-tz">${abbr}</span>&nbsp; ${full}</span>` +
+      `<span class="eh-row">${datetime} <span class="eh-tz">${abbr}</span></span>` +
       `<span class="eh-row eh-muted">epoch ${digits} (${unitName})</span>`
     );
   }
