@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Epoch Hover (EDT/EST)",
+  "version": "1.1.0",
+  "description": "Hover over an epoch-timestamp folder/file name in the AWS console to see it as Eastern (EDT/EST) time.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Epoch Hover settings",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.console.aws.amazon.com/*",
+        "https://console.aws.amazon.com/*",
+        "https://*.aws.amazon.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["tooltip.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

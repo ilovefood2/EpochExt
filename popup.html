@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      width: 260px;
+      margin: 0;
+      padding: 14px 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      background: #16191f;
+      color: #fff;
+    }
+    h1 {
+      font-size: 14px;
+      margin: 0 0 12px;
+      color: #ff9900;
+    }
+    label.field { display: block; margin: 0 0 6px; color: #aab7b8; font-size: 12px; }
+    select {
+      width: 100%;
+      padding: 6px 8px;
+      border-radius: 6px;
+      border: 1px solid #545b64;
+      background: #21252b;
+      color: #fff;
+      font-size: 13px;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .row input { width: 16px; height: 16px; accent-color: #ff9900; }
+    .hint { margin-top: 12px; color: #aab7b8; font-size: 11px; line-height: 1.5; }
+    .saved { color: #16c98d; font-size: 11px; height: 14px; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Epoch Hover</h1>
+
+  <label class="field" for="tz">Display timezone</label>
+  <select id="tz">
+    <option value="America/New_York">Eastern (EDT/EST) — default</option>
+    <option value="America/Chicago">Central (CDT/CST)</option>
+    <option value="America/Denver">Mountain (MDT/MST)</option>
+    <option value="America/Los_Angeles">Pacific (PDT/PST)</option>
+    <option value="UTC">UTC</option>
+    <option value="Europe/London">London</option>
+    <option value="Europe/Paris">Central Europe</option>
+    <option value="Asia/Kolkata">India</option>
+    <option value="Asia/Shanghai">China</option>
+    <option value="Asia/Tokyo">Japan</option>
+    <option value="auto">Auto (this browser's zone)</option>
+  </select>
+
+  <div class="row">
+    <input type="checkbox" id="pin" />
+    <label for="pin">Pin tooltip on click (stays open)</label>
+  </div>
+
+  <div class="saved" id="saved"></div>
+
+  <div class="hint">
+    Hover a timestamp name in the AWS console. With pinning on, click it to keep
+    the note open; click the × or anywhere else to dismiss.
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

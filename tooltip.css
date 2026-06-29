@@ -1,0 +1,56 @@
+#epoch-hover-tooltip {
+  position: fixed;
+  z-index: 2147483647;
+  pointer-events: none;
+  max-width: 360px;
+  background: #16191f;
+  color: #ffffff;
+  border: 1px solid #545b64;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.08s ease-in;
+}
+
+#epoch-hover-tooltip.visible {
+  opacity: 1;
+}
+
+#epoch-hover-tooltip.pinned {
+  border-color: #ff9900;
+  padding-right: 24px;
+}
+
+#epoch-hover-tooltip .eh-close {
+  position: absolute;
+  top: 4px;
+  right: 7px;
+  cursor: pointer;
+  color: #aab7b8;
+  font-size: 15px;
+  line-height: 1;
+  pointer-events: auto;
+}
+
+#epoch-hover-tooltip .eh-close:hover {
+  color: #fff;
+}
+
+#epoch-hover-tooltip .eh-tz {
+  font-weight: 700;
+  color: #ff9900;
+}
+
+#epoch-hover-tooltip .eh-row {
+  display: block;
+}
+
+#epoch-hover-tooltip .eh-muted {
+  color: #aab7b8;
+  font-size: 11px;
+}
