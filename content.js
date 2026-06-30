@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const DEFAULTS = { tz: "America/New_York", pinOnClick: true };
+  const DEFAULTS = { tz: "America/New_York", pinOnClick: false };
   const config = { ...DEFAULTS };
 
   // Match a standalone run of 10, 13, 16, or 19 digits anywhere in the text.

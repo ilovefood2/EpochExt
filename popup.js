@@ -1,4 +1,4 @@
-const DEFAULTS = { tz: "America/New_York", pinOnClick: true };
+const DEFAULTS = { tz: "America/New_York", pinOnClick: false };
 
 const tzEl = document.getElementById("tz");
 const pinEl = document.getElementById("pin");
