@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "EpochExt",
   "version": "1.3.2",
-  "description": "Hover over an epoch-timestamp anywhere on the web to see it as a human-readable date in your chosen timezone (default Eastern EDT/EST).",
+  "description": "Hover over Unix timestamps on any website to see readable dates in your chosen timezone, including Eastern EDT/EST.",
   "permissions": ["storage"],
   "icons": {
     "16": "icon16.png",
